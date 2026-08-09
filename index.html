@@ -676,6 +676,130 @@
         </div>
     </section>
 
+    <!-- Tour Details Section -->
+    <section class="tour-details-section" id="tourDetailsSection" style="display: none;">
+        <div class="section-container">
+            <!-- Breadcrumbs -->
+            <div class="breadcrumbs">
+                <a href="#" class="breadcrumb-link" id="breadcrumbHome">Home</a>
+                <span class="breadcrumb-separator">&gt;</span>
+                <a href="#" class="breadcrumb-link" id="breadcrumbTreks">Treks</a>
+                <span class="breadcrumb-separator">&gt;</span>
+                <span class="breadcrumb-current" id="breadcrumbCurrent">Raigad Fort Trek</span>
+            </div>
+
+            <!-- Main Details Content -->
+            <div class="details-grid">
+                <!-- Left Side: Information -->
+                <div class="details-left">
+                    <div class="details-tags">
+                        <span class="tag tag-green">TREK</span>
+                        <span class="tag tag-light">Popular</span>
+                    </div>
+                    <h1 class="details-title" id="detailsTitle">Raigad Fort Trek</h1>
+                    <div class="details-location">
+                        <svg class="location-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2a8 8 0 0 0-8 8c0 5.25 8 12 8 12s8-6.75 8-12a8 8 0 0 0-8-8z"/>
+                            <circle cx="12" cy="10" r="3"/>
+                        </svg>
+                        <span id="detailsLocation">Raigad, Maharashtra</span>
+                    </div>
+                    <p class="details-description" id="detailsDescription">
+                        The capital of the Maratha Empire, Raigad Fort stands tall with breathtaking views, rich history and an unforgettable trekking experience.
+                    </p>
+
+                    <!-- Specs Grid -->
+                    <div class="specs-grid">
+                        <div class="spec-item">
+                            <div class="spec-icon-wrapper">
+                                <svg class="spec-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                                </svg>
+                            </div>
+                            <div class="spec-info">
+                                <span class="spec-label">Difficulty</span>
+                                <span class="spec-value" id="specDifficulty">Moderate</span>
+                            </div>
+                        </div>
+                        <div class="spec-item">
+                            <div class="spec-icon-wrapper">
+                                <svg class="spec-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="10"/>
+                                    <polyline points="12 6 12 12 16 14"/>
+                                </svg>
+                            </div>
+                            <div class="spec-info">
+                                <span class="spec-label">Duration</span>
+                                <span class="spec-value" id="specDuration">2 Days, 1 Night</span>
+                            </div>
+                        </div>
+                        <div class="spec-item">
+                            <div class="spec-icon-wrapper">
+                                <svg class="spec-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                                    <line x1="16" y1="2" x2="16" y2="6"/>
+                                    <line x1="8" y1="2" x2="8" y2="6"/>
+                                    <line x1="3" y1="10" x2="21" y2="10"/>
+                                </svg>
+                            </div>
+                            <div class="spec-info">
+                                <span class="spec-label">Best Season</span>
+                                <span class="spec-value" id="specSeason">Jun - Feb</span>
+                            </div>
+                        </div>
+                        <div class="spec-item">
+                            <div class="spec-icon-wrapper">
+                                <svg class="spec-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M23 6l-9.5 9.5-5-5L1 18"/>
+                                    <polyline points="17 6 23 6 23 12"/>
+                                </svg>
+                            </div>
+                            <div class="spec-info">
+                                <span class="spec-label">Max Altitude</span>
+                                <span class="spec-value" id="specAltitude">2,700 ft</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Rating and Stats -->
+                    <div class="details-rating-stats">
+                        <div class="rating-reviews">
+                            <svg class="star-icon" viewBox="0 0 24 24" fill="currentColor">
+                                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                            </svg>
+                            <span class="rating-value" id="detailsRating">4.8</span>
+                            <span class="reviews-count" id="detailsReviews">(245 Reviews)</span>
+                        </div>
+                        <div class="stats-separator"></div>
+                        <div class="happy-trekkers">
+                            <span class="trekkers-count" id="detailsTrekkers">10K+</span>
+                            <span class="trekkers-label">Happy Trekkers</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Side: Gallery Visuals -->
+                <div class="details-right">
+                    <div class="main-image-container">
+                        <img src="https://images.unsplash.com/photo-1544735716-392fe2489ffa?q=80&w=1000" alt="Trek Main Image" class="details-main-image" id="detailsMainImage">
+                        <button class="view-gallery-btn">
+                            <svg class="gallery-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                                <circle cx="8.5" cy="8.5" r="1.5"/>
+                                <polyline points="21 15 16 10 5 21"/>
+                            </svg>
+                            View Gallery
+                        </button>
+                    </div>
+                    <!-- Thumbnails Row -->
+                    <div class="thumbnails-row" id="thumbnailsRow">
+                        <!-- Filled dynamically by JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Footer -->
     <footer class="footer">
         <svg class="footer-silhouette" viewBox="0 0 1440 200" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
@@ -996,6 +1120,157 @@
             formFields.forEach(field => field.classList.remove('open'));
         });
 
+        // Trek Details Database
+        const trekData = {
+            "kalsubai peak": {
+                title: "Kalsubai Peak Trek",
+                location: "Ahmednagar, Maharashtra",
+                description: "Climb the highest peak in Maharashtra. Standing at 5,400 feet, Kalsubai Peak offers stunning panoramic views of the Western Ghats, Bhandardara Dam backwaters, and surrounding forts, making it a dream trek for nature lovers and adventure seekers.",
+                difficulty: "Moderate",
+                duration: "1 Day Trek",
+                season: "Jun - Dec",
+                altitude: "5,400 ft",
+                rating: "4.8",
+                reviews: "(245 Reviews)",
+                trekkers: "12K+",
+                mainImg: "https://images.unsplash.com/photo-1598091383021-15ddea10925d?q=80&w=1000",
+                gallery: [
+                    "https://images.unsplash.com/photo-1598091383021-15ddea10925d?q=80&w=300",
+                    "https://images.unsplash.com/photo-1544735716-392fe2489ffa?q=80&w=300",
+                    "https://images.unsplash.com/photo-1605649487212-47bdab064df7?q=80&w=300",
+                    "https://images.unsplash.com/photo-1599661046289-e31897846e41?q=80&w=300",
+                    "https://images.unsplash.com/photo-1626509653890-50d40131102e?q=80&w=300",
+                    "https://images.unsplash.com/photo-1618083707368-b3823daa2726?q=80&w=300"
+                ]
+            },
+            "lohagad fort": {
+                title: "Lohagad Fort Trek",
+                location: "Lonavala, Maharashtra",
+                description: "Step into history at Lohagad Fort. Meaning 'Iron Fort', this is one of the most popular and easiest hill forts to trek in Maharashtra. Famous for its iconic Vinchukata (scorpion tail) spur, it provides breathtaking vistas of Pawna Lake and lush green valleys.",
+                difficulty: "Easy",
+                duration: "1 Day Trek",
+                season: "Jun - Feb",
+                altitude: "3,380 ft",
+                rating: "4.7",
+                reviews: "(182 Reviews)",
+                trekkers: "8K+",
+                mainImg: "https://images.unsplash.com/photo-1605649487212-47bdab064df7?q=80&w=1000",
+                gallery: [
+                    "https://images.unsplash.com/photo-1605649487212-47bdab064df7?q=80&w=300",
+                    "https://images.unsplash.com/photo-1598091383021-15ddea10925d?q=80&w=300",
+                    "https://images.unsplash.com/photo-1544735716-392fe2489ffa?q=80&w=300",
+                    "https://images.unsplash.com/photo-1599661046289-e31897846e41?q=80&w=300",
+                    "https://images.unsplash.com/photo-1626509653890-50d40131102e?q=80&w=300",
+                    "https://images.unsplash.com/photo-1618083707368-b3823daa2726?q=80&w=300"
+                ]
+            },
+            "rajgad fort": {
+                title: "Rajgad Fort Trek",
+                location: "Pune, Maharashtra",
+                description: "Explore the king of all forts in Maharashtra. Rajgad Fort was the first capital of the Maratha Empire under Shivaji Maharaj. With its massive layout, Padmavati Machi, and the thrilling Sanjeevani Machi ridge walk, it delivers an epic trekking experience.",
+                difficulty: "Moderate",
+                duration: "2 Days, 1 Night",
+                season: "Jun - Feb",
+                altitude: "4,600 ft",
+                rating: "4.9",
+                reviews: "(310 Reviews)",
+                trekkers: "15K+",
+                mainImg: "https://images.unsplash.com/photo-1544735716-392fe2489ffa?q=80&w=1000",
+                gallery: [
+                    "https://images.unsplash.com/photo-1544735716-392fe2489ffa?q=80&w=300",
+                    "https://images.unsplash.com/photo-1598091383021-15ddea10925d?q=80&w=300",
+                    "https://images.unsplash.com/photo-1605649487212-47bdab064df7?q=80&w=300",
+                    "https://images.unsplash.com/photo-1599661046289-e31897846e41?q=80&w=300",
+                    "https://images.unsplash.com/photo-1626509653890-50d40131102e?q=80&w=300",
+                    "https://images.unsplash.com/photo-1618083707368-b3823daa2726?q=80&w=300"
+                ]
+            },
+            "vasota fort": {
+                title: "Vasota Fort Trek",
+                location: "Satara, Maharashtra",
+                description: "Embark on an adventurous jungle trek. Located deep inside the Koyna Wildlife Sanctuary, Vasota Fort is accessible only by boat across the scenic Koyna backwaters. This wilderness trek offers incredible forest cover, wildlife sights, and sheer vertical cliffs.",
+                difficulty: "Hard",
+                duration: "1 Day Trek",
+                season: "Oct - Feb",
+                altitude: "3,840 ft",
+                rating: "4.8",
+                reviews: "(140 Reviews)",
+                trekkers: "5K+",
+                mainImg: "https://images.unsplash.com/photo-1599661046289-e31897846e41?q=80&w=1000",
+                gallery: [
+                    "https://images.unsplash.com/photo-1599661046289-e31897846e41?q=80&w=300",
+                    "https://images.unsplash.com/photo-1598091383021-15ddea10925d?q=80&w=300",
+                    "https://images.unsplash.com/photo-1544735716-392fe2489ffa?q=80&w=300",
+                    "https://images.unsplash.com/photo-1605649487212-47bdab064df7?q=80&w=300",
+                    "https://images.unsplash.com/photo-1626509653890-50d40131102e?q=80&w=300",
+                    "https://images.unsplash.com/photo-1618083707368-b3823daa2726?q=80&w=300"
+                ]
+            },
+            "devgiri fort": {
+                title: "Devgiri Fort Tour",
+                location: "Chh. Sambhajinagar, Maharashtra",
+                description: "Witness the engineering marvel of ancient India. Devgiri Fort (also known as Daulatabad Fort) is famed for its formidable defense mechanisms, including the dark, confusing passages of the 'Bhool Bhulaiya' and a deep water moat cut straight from stone.",
+                difficulty: "Easy",
+                duration: "1 Day Trek",
+                season: "Sep - Mar",
+                altitude: "2,000 ft",
+                rating: "4.6",
+                reviews: "(98 Reviews)",
+                trekkers: "4K+",
+                mainImg: "https://images.unsplash.com/photo-1608958416805-4c07c2162608?q=80&w=1000",
+                gallery: [
+                    "https://images.unsplash.com/photo-1608958416805-4c07c2162608?q=80&w=300",
+                    "https://images.unsplash.com/photo-1598091383021-15ddea10925d?q=80&w=300",
+                    "https://images.unsplash.com/photo-1544735716-392fe2489ffa?q=80&w=300",
+                    "https://images.unsplash.com/photo-1605649487212-47bdab064df7?q=80&w=300",
+                    "https://images.unsplash.com/photo-1599661046289-e31897846e41?q=80&w=300",
+                    "https://images.unsplash.com/photo-1626509653890-50d40131102e?q=80&w=300"
+                ]
+            },
+            "panhala fort": {
+                title: "Panhala Fort Trek",
+                location: "Kolhapur, Maharashtra",
+                description: "Walk the path of history. Panhala Fort holds a legendary place in Maratha history. It offers expansive fortress walls, massive bastions, and the famous Sajja Kothi where Shivaji Maharaj was once besieged. Perfect combination of historical tour and trek.",
+                difficulty: "Easy",
+                duration: "1 Day Trek",
+                season: "Jun - Feb",
+                altitude: "3,100 ft",
+                rating: "4.7",
+                reviews: "(125 Reviews)",
+                trekkers: "6K+",
+                mainImg: "https://images.unsplash.com/photo-1626509653890-50d40131102e?q=80&w=1000",
+                gallery: [
+                    "https://images.unsplash.com/photo-1626509653890-50d40131102e?q=80&w=300",
+                    "https://images.unsplash.com/photo-1598091383021-15ddea10925d?q=80&w=300",
+                    "https://images.unsplash.com/photo-1544735716-392fe2489ffa?q=80&w=300",
+                    "https://images.unsplash.com/photo-1605649487212-47bdab064df7?q=80&w=300",
+                    "https://images.unsplash.com/photo-1599661046289-e31897846e41?q=80&w=300",
+                    "https://images.unsplash.com/photo-1618083707368-b3823daa2726?q=80&w=300"
+                ]
+            },
+            "pench jungle trek": {
+                title: "Pench Jungle Trek & Safari",
+                location: "Nagpur Region, Maharashtra",
+                description: "Roam in the land of Mowgli. Pench National Park, which inspired the famous Jungle Book, offers wilderness walking trails, camping under forest skies, and wildlife safaris. Ideal for adventure lovers wanting to experience nature up close.",
+                difficulty: "Easy",
+                duration: "2 Days Trek",
+                season: "Nov - May",
+                altitude: "1,500 ft",
+                rating: "4.5",
+                reviews: "(76 Reviews)",
+                trekkers: "3K+",
+                mainImg: "https://images.unsplash.com/photo-1618083707368-b3823daa2726?q=80&w=1000",
+                gallery: [
+                    "https://images.unsplash.com/photo-1618083707368-b3823daa2726?q=80&w=300",
+                    "https://images.unsplash.com/photo-1598091383021-15ddea10925d?q=80&w=300",
+                    "https://images.unsplash.com/photo-1544735716-392fe2489ffa?q=80&w=300",
+                    "https://images.unsplash.com/photo-1605649487212-47bdab064df7?q=80&w=300",
+                    "https://images.unsplash.com/photo-1599661046289-e31897846e41?q=80&w=300",
+                    "https://images.unsplash.com/photo-1626509653890-50d40131102e?q=80&w=300"
+                ]
+            }
+        };
+
         // Filtering Logic
         const tabs = document.querySelectorAll('.widget-tab');
         const cards = document.querySelectorAll('.trek-card');
@@ -1104,6 +1379,121 @@
 
         // Run initially to apply default 3-card view limit
         applyFilterAndSearch();
+
+        // Details Navigation Logic
+        const treksGrid = document.getElementById('treksGrid');
+        treksGrid.addEventListener('click', (e) => {
+            const card = e.target.closest('.trek-card');
+            if (!card) return;
+            
+            const titleEl = card.querySelector('.card-title');
+            if (titleEl) {
+                const trekName = titleEl.textContent.trim().toLowerCase();
+                openTrekDetails(trekName);
+            }
+        });
+
+        function openTrekDetails(trekName) {
+            const data = trekData[trekName];
+            if (!data) return;
+
+            // Populate breadcrumbs and titles
+            document.getElementById('breadcrumbCurrent').textContent = data.title;
+            document.getElementById('detailsTitle').textContent = data.title;
+            document.getElementById('detailsLocation').textContent = data.location;
+            document.getElementById('detailsDescription').textContent = data.description;
+            document.getElementById('specDifficulty').textContent = data.difficulty;
+            document.getElementById('specDuration').textContent = data.duration;
+            document.getElementById('specSeason').textContent = data.season;
+            document.getElementById('specAltitude').textContent = data.altitude;
+            document.getElementById('detailsRating').textContent = data.rating;
+            document.getElementById('detailsReviews').textContent = data.reviews;
+            document.getElementById('detailsTrekkers').textContent = data.trekkers;
+            
+            // Set main image
+            document.getElementById('detailsMainImage').src = data.mainImg;
+
+            // Populate thumbnails
+            const thumbnailsRow = document.getElementById('thumbnailsRow');
+            thumbnailsRow.innerHTML = '';
+            
+            data.gallery.forEach((imgUrl, index) => {
+                const wrapper = document.createElement('div');
+                wrapper.className = 'thumbnail-wrapper';
+                
+                const img = document.createElement('img');
+                img.src = imgUrl;
+                img.alt = `Trek Thumbnail ${index + 1}`;
+                img.className = 'thumbnail-img';
+                wrapper.appendChild(img);
+
+                // Add play overlay to first item (video)
+                if (index === 0) {
+                    const playOverlay = document.createElement('div');
+                    playOverlay.className = 'video-play-overlay';
+                    playOverlay.innerHTML = `
+                        <svg class="play-icon-svg" viewBox="0 0 24 24" fill="currentColor">
+                            <polygon points="5 3 19 12 5 21"/>
+                        </svg>
+                    `;
+                    wrapper.appendChild(playOverlay);
+                }
+
+                // Add more photos overlay to last item (+12)
+                if (index === 5) {
+                    const moreOverlay = document.createElement('div');
+                    moreOverlay.className = 'more-photos-overlay';
+                    moreOverlay.textContent = '+12';
+                    wrapper.appendChild(moreOverlay);
+                }
+
+                // Thumbnail click changes main image
+                wrapper.addEventListener('click', () => {
+                    document.getElementById('detailsMainImage').src = imgUrl;
+                });
+
+                thumbnailsRow.appendChild(wrapper);
+            });
+
+            // Hide main home sections
+            document.querySelector('.hero-section').style.display = 'none';
+            document.querySelector('.best-treks-section').style.display = 'none';
+            document.querySelector('.why-us-section').style.display = 'none';
+            document.querySelector('.cta-section').style.display = 'none';
+            document.querySelector('.stats-section').style.display = 'none';
+
+            // Show details section
+            const detailsSec = document.getElementById('tourDetailsSection');
+            detailsSec.style.display = 'block';
+
+            // Scroll to top
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function closeTrekDetails() {
+            // Show main home sections
+            document.querySelector('.hero-section').style.display = 'block';
+            document.querySelector('.best-treks-section').style.display = 'block';
+            document.querySelector('.why-us-section').style.display = 'block';
+            document.querySelector('.cta-section').style.display = 'block';
+            document.querySelector('.stats-section').style.display = 'block';
+
+            // Hide details section
+            document.getElementById('tourDetailsSection').style.display = 'none';
+
+            // Scroll to grid
+            document.getElementById('treksGrid').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        document.getElementById('breadcrumbHome').addEventListener('click', (e) => {
+            e.preventDefault();
+            closeTrekDetails();
+        });
+        
+        document.getElementById('breadcrumbTreks').addEventListener('click', (e) => {
+            e.preventDefault();
+            closeTrekDetails();
+        });
 
         // Header scroll handler for frosted glass fade-in effect
         const header = document.querySelector('.main-header');
