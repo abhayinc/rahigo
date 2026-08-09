@@ -1092,16 +1092,18 @@ body {
 .maharashtra-map {
     width: 100%;
     height: 100%;
-    filter: drop-shadow(0 12px 30px rgba(0, 0, 0, 0.03));
+    filter: drop-shadow(0 16px 40px rgba(32, 70, 34, 0.08));
 }
 
 .district-boundary {
+    fill: #e3e7e3 !important; /* Slightly darker grey-green than the background */
+    stroke: #b8ccb8 !important; /* Slightly more defined borders */
     cursor: pointer;
     transition: fill 0.2s ease, stroke 0.2s ease;
 }
 
 .district-boundary:hover {
-    fill: #e2ede2 !important; /* Rich forest tint on hover */
+    fill: #c9dbc9 !important; /* Slightly deeper hover tint */
     stroke: #204622 !important;
     stroke-width: 1.2px !important;
 }
