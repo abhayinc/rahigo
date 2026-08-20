@@ -73,6 +73,23 @@ export default {
       title: 'CTA Banner Background Image',
       type: 'image',
       options: { hotspot: true }
+    },
+    {
+      name: 'seoTitle',
+      title: 'SEO Title',
+      type: 'string',
+      placeholder: 'e.g. RahiGo Tours - Explore Treks in Maharashtra'
+    },
+    {
+      name: 'seoDescription',
+      title: 'SEO Description Meta Tag',
+      type: 'text'
+    },
+    {
+      name: 'seoKeywords',
+      title: 'SEO Keywords Meta Tag',
+      type: 'string',
+      placeholder: 'e.g. treks, Maharashtra, forts, camping, tours'
     }
   ]
 }

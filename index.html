@@ -2302,8 +2302,12 @@
             // Update phone numbers
             if (settings.phone) {
                 // Header text phone number
-                const phoneTextSpan = document.querySelector('.phone-group span');
-                if (phoneTextSpan) phoneTextSpan.textContent = settings.phone;
+                const headerPhoneSpan = document.querySelector('.header-phone-val');
+                if (headerPhoneSpan) headerPhoneSpan.textContent = settings.phone;
+                
+                // Header button tel link
+                const headerPhoneLink = document.querySelector('.header-phone-btn');
+                if (headerPhoneLink) headerPhoneLink.setAttribute('href', `tel:${settings.phone.replace(/\s+/g, '')}`);
                 
                 // Footer text phone number
                 const footerPhoneText = document.querySelectorAll('.footer-contact span');
@@ -2380,6 +2384,29 @@
                 const ctaBanner = document.querySelector('.cta-banner');
                 if (ctaBanner) ctaBanner.style.backgroundImage = `url('${urlFor(settings.ctaBgImage)}')`;
             }
+
+            // Update SEO Metadata
+            if (settings.seoTitle) {
+                document.title = settings.seoTitle;
+            }
+            if (settings.seoDescription) {
+                let descMeta = document.querySelector('meta[name="description"]');
+                if (!descMeta) {
+                    descMeta = document.createElement('meta');
+                    descMeta.setAttribute('name', 'description');
+                    document.head.appendChild(descMeta);
+                }
+                descMeta.setAttribute('content', settings.seoDescription);
+            }
+            if (settings.seoKeywords) {
+                let keyMeta = document.querySelector('meta[name="keywords"]');
+                if (!keyMeta) {
+                    keyMeta = document.createElement('meta');
+                    keyMeta.setAttribute('name', 'keywords');
+                    document.head.appendChild(keyMeta);
+                }
+                keyMeta.setAttribute('content', settings.seoKeywords);
+            }
         }
 
         async function fetchSanityData() {
@@ -2425,7 +2452,10 @@
                 heroBgImage,
                 ctaHeading,
                 ctaText,
-                ctaBgImage
+                ctaBgImage,
+                seoTitle,
+                seoDescription,
+                seoKeywords
               }
             }`);
 
