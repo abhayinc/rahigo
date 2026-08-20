@@ -1571,6 +1571,7 @@ body {
     grid-template-columns: 1.6fr 1fr 1fr 1.2fr;
     gap: 60px;
     margin-bottom: 60px;
+    align-items: end; /* Align all columns to the bottom in sync */
 }
 
 .footer-column h3 {
@@ -1586,7 +1587,6 @@ body {
     display: flex;
     flex-direction: column;
     gap: 12px; /* Tighter gap spacing for cohesive layout */
-    justify-content: flex-end;
 }
 
 .footer-logo-top {
