@@ -1563,7 +1563,7 @@ body {
 
 .footer-inner {
     padding: 40px 0 0 0;
-    background-color: #0d170e; /* Deeper premium forest carbon color */
+    background-color: #121913; /* Rich dark pine green color */
 }
 
 .footer-grid {
@@ -1595,8 +1595,8 @@ body {
 }
 
 .footer-logo-top .logo-image-top {
-    width: 80px; /* Elegant, compact logo size */
-    height: 80px;
+    width: 96px; /* Slightly bigger, prominent yet balanced */
+    height: 96px;
     display: block;
 }
 
