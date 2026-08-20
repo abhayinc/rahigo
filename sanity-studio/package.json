@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "sanity dev",
     "start": "sanity start",
-    "build": "npx sanity build",
+    "build": "node node_modules/sanity/bin/sanity build",
     "deploy": "sanity deploy"
   },
   "dependencies": {
