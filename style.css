@@ -1563,7 +1563,7 @@ body {
 
 .footer-inner {
     padding: 40px 0 0 0;
-    background-color: #112213;
+    background-color: #0d170e; /* Deeper premium forest carbon color */
 }
 
 .footer-grid {
@@ -1589,16 +1589,14 @@ body {
 }
 
 .footer-logo-top {
-    margin-left: -28px;
-    /* Aligns the actual logo graphic with the text column left edge */
-    margin-bottom: -16px;
-    /* Minimizes gap between logo and the text column starting line */
+    margin-left: -20px; /* Compensate for SVG whitespace padding */
+    margin-bottom: -20px;
+    margin-top: -10px;
 }
 
 .footer-logo-top .logo-image-top {
-    width: 160px;
-    /* Large prominent footer logo size */
-    height: 160px;
+    width: 120px; /* Perfectly compact and aligned size */
+    height: 120px;
     display: block;
 }
 
@@ -1678,11 +1676,13 @@ body {
     color: rgba(255, 255, 255, 0.7);
     text-decoration: none;
     font-size: 14px;
-    transition: color 0.2s ease;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    display: inline-block;
 }
 
 .footer-links a:hover {
-    color: #ffffff;
+    color: #81c784;
+    transform: translateX(4px);
 }
 
 .footer-contact {
