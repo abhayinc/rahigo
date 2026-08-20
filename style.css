@@ -1585,19 +1585,18 @@ body {
 .footer-about {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 12px; /* Tighter gap spacing for cohesive layout */
     justify-content: flex-end;
 }
 
 .footer-logo-top {
-    margin-left: -20px; /* Compensate for SVG whitespace padding */
-    margin-bottom: -20px;
-    margin-top: -10px;
+    margin: 0;
+    padding: 0;
 }
 
 .footer-logo-top .logo-image-top {
-    width: 120px; /* Perfectly compact and aligned size */
-    height: 120px;
+    width: 80px; /* Elegant, compact logo size */
+    height: 80px;
     display: block;
 }
 
@@ -1605,27 +1604,21 @@ body {
 .footer-about .logo-text {
     font-family: 'Outfit', sans-serif;
     font-size: 24px;
-    /* Balanced size matching layout hierarchy */
     font-weight: 600;
     color: #81c784;
-    /* Vibrant brand green */
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: flex-start;
-    /* Force left-alignment and override generic centered rules */
     gap: 8px;
     line-height: 1;
-    margin-bottom: 24px;
-    /* Matches margin-bottom of other column h3 headers (24px) */
+    margin-bottom: 0; /* Remove duplicate margin conflict with flex gap */
     letter-spacing: -0.2px;
 }
 
 .footer-about .logo-sub {
     color: #ffffff;
-    /* Contrast white */
     font-weight: 800;
-    /* Ultra-bold suffix matching header structure */
 }
 
 
