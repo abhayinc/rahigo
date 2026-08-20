@@ -2371,6 +2371,34 @@
                 const waLinks = document.querySelectorAll('a[aria-label="WhatsApp"]');
                 waLinks.forEach(l => l.setAttribute('href', settings.whatsappUrl));
             }
+
+            // Update Hero Content
+            if (settings.heroTitle) {
+                const heroTitleEl = document.querySelector('.hero-title');
+                if (heroTitleEl) heroTitleEl.innerHTML = settings.heroTitle;
+            }
+            if (settings.heroSubtitle) {
+                const heroSubEl = document.querySelector('.hero-subtitle');
+                if (heroSubEl) heroSubEl.textContent = settings.heroSubtitle;
+            }
+            if (settings.heroBgImage) {
+                const heroSec = document.querySelector('.hero-section');
+                if (heroSec) heroSec.style.backgroundImage = `url('${settings.heroBgImage}')`;
+            }
+
+            // Update CTA Content
+            if (settings.ctaHeading) {
+                const ctaHeadingEl = document.querySelector('.cta-title');
+                if (ctaHeadingEl) ctaHeadingEl.textContent = settings.ctaHeading;
+            }
+            if (settings.ctaText) {
+                const ctaSubEl = document.querySelector('.cta-subtitle');
+                if (ctaSubEl) ctaSubEl.textContent = settings.ctaText;
+            }
+            if (settings.ctaBgImage) {
+                const ctaBanner = document.querySelector('.cta-banner');
+                if (ctaBanner) ctaBanner.style.backgroundImage = `url('${settings.ctaBgImage}')`;
+            }
         }
 
         async function fetchSanityData() {
@@ -2410,7 +2438,13 @@
                 instagramUrl,
                 facebookUrl,
                 youtubeUrl,
-                whatsappUrl
+                whatsappUrl,
+                heroTitle,
+                heroSubtitle,
+                heroBgImage,
+                ctaHeading,
+                ctaText,
+                ctaBgImage
               }
             }`);
 

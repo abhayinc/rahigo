@@ -38,6 +38,39 @@ export default {
       name: 'whatsappUrl',
       title: 'WhatsApp URL',
       type: 'url'
+    },
+    {
+      name: 'heroTitle',
+      title: 'Hero Heading Title',
+      type: 'string',
+      placeholder: 'e.g. Find Your Next Adventure'
+    },
+    {
+      name: 'heroSubtitle',
+      title: 'Hero Subtitle Description',
+      type: 'string',
+      placeholder: 'e.g. Explore Maharashtra like never before.'
+    },
+    {
+      name: 'heroBgImage',
+      title: 'Hero Background Image URL',
+      type: 'url'
+    },
+    {
+      name: 'ctaHeading',
+      title: 'CTA Banner Heading',
+      type: 'string',
+      placeholder: 'e.g. Every step tells a story.'
+    },
+    {
+      name: 'ctaText',
+      title: 'CTA Banner Description Text',
+      type: 'text'
+    },
+    {
+      name: 'ctaBgImage',
+      title: 'CTA Banner Background Image URL',
+      type: 'url'
     }
   ]
 }
