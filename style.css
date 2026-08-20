@@ -68,11 +68,9 @@ body {
 }
 
 .logo-image {
-    width: 136px;
-    /* Doubled standalone logo size */
-    height: 136px;
-    margin-left: -24px;
-    /* Pulls the logo content to the left to align with the website edge */
+    width: 90px; /* Reduced header logo size for clean layout proportion */
+    height: 90px;
+    margin-left: -15px; /* Aligns header logo perfectly with page contents boundary */
     object-fit: contain;
     transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
