@@ -53,8 +53,9 @@ export default {
     },
     {
       name: 'heroBgImage',
-      title: 'Hero Background Image URL',
-      type: 'url'
+      title: 'Hero Background Image',
+      type: 'image',
+      options: { hotspot: true }
     },
     {
       name: 'ctaHeading',
@@ -69,8 +70,9 @@ export default {
     },
     {
       name: 'ctaBgImage',
-      title: 'CTA Banner Background Image URL',
-      type: 'url'
+      title: 'CTA Banner Background Image',
+      type: 'image',
+      options: { hotspot: true }
     }
   ]
 }

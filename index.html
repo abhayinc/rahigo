@@ -2235,6 +2235,25 @@
         const SANITY_PROJECT_ID = 'won3azo9';
         const SANITY_DATASET = 'production';
 
+        function urlFor(source) {
+            if (!source) return '';
+            if (typeof source === 'string') return source; // fallback to raw string URLs
+            
+            // Resolve Sanity Image reference
+            if (source.asset && source.asset._ref) {
+                const ref = source.asset._ref;
+                // Format is: image-[assetId]-[dimensions]-[extension]
+                const parts = ref.split('-');
+                if (parts.length >= 4) {
+                    const assetId = parts[1];
+                    const dimensions = parts[2];
+                    const extension = parts[3];
+                    return `https://cdn.sanity.io/images/${SANITY_PROJECT_ID}/${SANITY_DATASET}/${assetId}-${dimensions}.${extension}`;
+                }
+            }
+            return '';
+        }
+
         function renderTrekCards(treks) {
             const grid = document.getElementById('treksGrid');
             if (!grid) return;
@@ -2250,7 +2269,7 @@
                 card.setAttribute('data-region', trek.location ? trek.location.split(',')[0].trim() : 'Maharashtra');
                 
                 if (trek.mainImg) {
-                    card.style.backgroundImage = `url('${trek.mainImg}')`;
+                    card.style.backgroundImage = `url('${urlFor(trek.mainImg)}')`;
                 }
 
                 card.innerHTML = `
@@ -2295,7 +2314,7 @@
                 card.innerHTML = `
                     <div class="card-author-line">
                          <div class="author-avatar-wrapper">
-                             <img src="${t.avatar || 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=150'}" alt="${t.name}" class="author-avatar-img">
+                             <img src="${urlFor(t.avatar) || 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=150'}" alt="${t.name}" class="author-avatar-img">
                          </div>
                          <div class="author-details-meta">
                              <div class="author-name-line">
@@ -2383,7 +2402,7 @@
             }
             if (settings.heroBgImage) {
                 const heroSec = document.querySelector('.hero-section');
-                if (heroSec) heroSec.style.backgroundImage = `url('${settings.heroBgImage}')`;
+                if (heroSec) heroSec.style.backgroundImage = `url('${urlFor(settings.heroBgImage)}')`;
             }
 
             // Update CTA Content
@@ -2397,7 +2416,7 @@
             }
             if (settings.ctaBgImage) {
                 const ctaBanner = document.querySelector('.cta-banner');
-                if (ctaBanner) ctaBanner.style.backgroundImage = `url('${settings.ctaBgImage}')`;
+                if (ctaBanner) ctaBanner.style.backgroundImage = `url('${urlFor(settings.ctaBgImage)}')`;
             }
         }
 
@@ -2515,16 +2534,17 @@
             document.getElementById('detailsTrekkers').textContent = data.trekkers;
 
             // Set main image
-            document.getElementById('detailsMainImage').src = data.mainImg;
+            document.getElementById('detailsMainImage').src = urlFor(data.mainImg);
 
             // Populate thumbnails
             const thumbnailsRow = document.getElementById('thumbnailsRow');
             thumbnailsRow.innerHTML = '';
 
-            data.gallery.forEach((imgUrl, index) => {
+            data.gallery.forEach((imgObj, index) => {
                 const wrapper = document.createElement('div');
                 wrapper.className = 'thumbnail-wrapper';
 
+                const imgUrl = urlFor(imgObj);
                 const img = document.createElement('img');
                 img.src = imgUrl;
                 img.alt = `Trek Thumbnail ${index + 1}`;
@@ -2609,7 +2629,7 @@
                                 ${eventsHtml}
                             </ul>
                         </div>
-                        ${day.img ? `<img src="${day.img}" alt="${day.title}" class="day-image">` : ''}
+                        ${day.img ? `<img src="${urlFor(day.img)}" alt="${day.title}" class="day-image">` : ''}
                     </div>
                 `;
                 itineraryTimeline.appendChild(dayDiv);

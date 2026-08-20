@@ -28,8 +28,9 @@ export default {
     },
     {
       name: 'avatar',
-      title: 'Avatar Image URL',
-      type: 'url'
+      title: 'Avatar Image',
+      type: 'image',
+      options: { hotspot: true }
     }
   ]
 }

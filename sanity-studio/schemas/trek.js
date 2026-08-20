@@ -73,14 +73,15 @@ export default {
     },
     {
       name: 'mainImg',
-      title: 'Main Image URL',
-      type: 'url'
+      title: 'Main Image',
+      type: 'image',
+      options: { hotspot: true }
     },
     {
       name: 'gallery',
-      title: 'Gallery Image URLs',
+      title: 'Gallery Images',
       type: 'array',
-      of: [{ type: 'url' }]
+      of: [{ type: 'image', options: { hotspot: true } }]
     },
     {
       name: 'highlights',
@@ -107,7 +108,7 @@ export default {
           fields: [
             { name: 'day', title: 'Day label', type: 'string', placeholder: 'e.g. Day 1' },
             { name: 'title', title: 'Day Title', type: 'string' },
-            { name: 'img', title: 'Image URL', type: 'url' },
+            { name: 'img', title: 'Day Image', type: 'image', options: { hotspot: true } },
             { name: 'events', title: 'Events', type: 'array', of: [{ type: 'string' }] }
           ]
         }
